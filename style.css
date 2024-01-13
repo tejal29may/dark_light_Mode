@@ -46,22 +46,38 @@ body {
     color: white;
   }
 
-  /* #circle{
+  #circle{
     position: absolute;
     height: 50px;
     width: 50px;
+    transition: all 0.5s;
     border-radius: 50%;
     background-color: #fff;
-    transition: transform .5s, background-color .5s;
+    /* transition: transform .5s, background-color .5s; */
     will-change: transform;
-} */
-
-#circle{
-    transform: translateX(calc(100% + 10px));
 }
+
 div{
     display: block;
 }
+
+h1{
+    animation: zoom-in-zoom-out 1s ease infinite;
+}
+
+
+@keyframes zoom-in-zoom-out {
+    0% {
+      transform: scale(1, 1);
+      color: blue;
+    }
+    50% {
+      transform: scale(0.5, 0.5);
+    }
+    100% {
+      transform: scale(1, 1);
+    }
+  }
 
 
    
